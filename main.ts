@@ -156,4 +156,5 @@ input.onGesture(Gesture.Shake, function () {
 })
 input.onLogoEvent(TouchButtonEvent.Pressed, function () {
     music.setVolume(0)
+    led.stopAnimation()
 })
