@@ -99,6 +99,7 @@ input.onButtonPressed(Button.B, function () {
     basic.showNumber(randint(2, 12))
 })
 input.onPinPressed(TouchPin.P1, function () {
+    input.calibrateCompass()
     basic.showString("" + (input.compassHeading()))
     basic.showArrow(ArrowNames.North)
 })
