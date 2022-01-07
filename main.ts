@@ -94,8 +94,6 @@ input.onButtonPressed(Button.AB, function () {
     basic.showString("Ay ay")
     basic.showString("Ee ee")
     basic.showString("OO oo")
-    basic.showString("Letters that mean words")
-    basic.showString("& means and")
 })
 input.onButtonPressed(Button.B, function () {
     basic.showNumber(randint(2, 12))
@@ -155,4 +153,7 @@ input.onGesture(Gesture.Shake, function () {
     basic.showNumber(98)
     basic.showNumber(99)
     basic.showNumber(100)
+})
+input.onLogoEvent(TouchButtonEvent.Pressed, function () {
+    music.setVolume(0)
 })
