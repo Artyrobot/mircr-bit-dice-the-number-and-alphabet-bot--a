@@ -1,3 +1,6 @@
+input.onPinPressed(TouchPin.P0, function () {
+    basic.showString("" + (input.temperature()))
+})
 input.onButtonPressed(Button.A, function () {
     basic.showNumber(0)
     basic.showNumber(1)
@@ -52,11 +55,12 @@ input.onButtonPressed(Button.A, function () {
     basic.showNumber(50)
     basic.showString("shake it realy hard for part 2")
 })
-input.onGesture(Gesture.ScreenUp, function () {
-    game.resume()
-})
-input.onGesture(Gesture.ScreenDown, function () {
-    game.pause()
+input.onPinPressed(TouchPin.P2, function () {
+    music.setVolume(127)
+    for (let index = 0; index < 999; index++) {
+        music.playMelody("C D E F G A B C5 ", 120)
+    }
+    music.setVolume(0)
 })
 input.onButtonPressed(Button.AB, function () {
     basic.showString("Hello this is the alphabet song!")
@@ -95,6 +99,10 @@ input.onButtonPressed(Button.AB, function () {
 })
 input.onButtonPressed(Button.B, function () {
     basic.showNumber(randint(2, 12))
+})
+input.onPinPressed(TouchPin.P1, function () {
+    basic.showString("" + (input.compassHeading()))
+    basic.showArrow(ArrowNames.North)
 })
 input.onGesture(Gesture.Shake, function () {
     basic.showNumber(51)
