@@ -1,6 +1,9 @@
 input.onPinPressed(TouchPin.P0, function () {
     basic.showString("" + (input.temperature()))
 })
+input.onLogoEvent(TouchButtonEvent.LongPressed, function () {
+    basic.showString("" + (input.lightLevel()))
+})
 input.onButtonPressed(Button.A, function () {
     basic.showNumber(0)
     basic.showNumber(1)
@@ -157,7 +160,5 @@ input.onGesture(Gesture.Shake, function () {
     basic.showNumber(100)
 })
 input.onLogoEvent(TouchButtonEvent.Pressed, function () {
-    music.setVolume(0)
-    led.stopAnimation()
-    basic.clearScreen()
+    basic.showString("" + (input.soundLevel()))
 })
