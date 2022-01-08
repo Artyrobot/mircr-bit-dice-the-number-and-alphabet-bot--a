@@ -57,6 +57,7 @@ input.onButtonPressed(Button.A, function () {
 })
 input.onPinPressed(TouchPin.P2, function () {
     for (let index = 0; index < 30 * 2; index++) {
+        music.setBuiltInSpeakerEnabled(true)
         music.setVolume(127)
         music.playMelody("C D E F G A B C5 ", 120)
     }
