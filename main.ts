@@ -56,8 +56,8 @@ input.onButtonPressed(Button.A, function () {
     basic.showString("shake it realy hard for part 2")
 })
 input.onPinPressed(TouchPin.P2, function () {
-    music.setVolume(127)
-    for (let index = 0; index < 999; index++) {
+    for (let index = 0; index < 30 * 2; index++) {
+        music.setVolume(127)
         music.playMelody("C D E F G A B C5 ", 120)
     }
     music.setVolume(0)
