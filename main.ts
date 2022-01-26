@@ -1,8 +1,8 @@
 input.onPinPressed(TouchPin.P0, function () {
-    basic.showString("" + (input.temperature()))
+    basic.showString("" + input.temperature())
 })
 input.onLogoEvent(TouchButtonEvent.LongPressed, function () {
-    basic.showString("" + (input.lightLevel()))
+    basic.showString("" + input.lightLevel())
 })
 input.onButtonPressed(Button.A, function () {
     basic.showNumber(0)
@@ -104,7 +104,7 @@ input.onButtonPressed(Button.B, function () {
 })
 input.onPinPressed(TouchPin.P1, function () {
     input.calibrateCompass()
-    basic.showString("" + (input.compassHeading()))
+    basic.showString("" + input.compassHeading())
     basic.showArrow(ArrowNames.North)
 })
 input.onGesture(Gesture.Shake, function () {
@@ -160,5 +160,5 @@ input.onGesture(Gesture.Shake, function () {
     basic.showNumber(100)
 })
 input.onLogoEvent(TouchButtonEvent.Pressed, function () {
-    basic.showString("" + (input.soundLevel()))
+    basic.showString("" + input.soundLevel())
 })
